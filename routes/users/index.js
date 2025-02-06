@@ -20,8 +20,9 @@ router.delete('/:id', (req, res) => {
 
 router.get('/update/:id', (req, res) => {
     const {id} = req.params
+    const {name, email, } = req.query
 
-    res.render("update", { id })
+    res.render("update", { id, name, email })
 })
 
 router.put('/:id', (req, res) => {
